@@ -1,0 +1,22 @@
+<div class="small-container center-block">
+<p class="font-weight-bold text-uppercase margin-top"><h1>Perfil</h1></p>
+<br>
+<div  style="text-align: center;">
+<% if current_user.avatar.attached? %>
+  <%= image_tag url_for(current_user.avatar),class:"rounded-circle", height:200, width:200 %>
+<% end %>
+</div>
+<br>
+<%= form_with(model:current_user, local:true) do |form| %>
+  <div class="field" >
+    <p><%= form.label :avatar %></p>
+    <p><%= form.file_field :avatar %></p>
+     <p><%= form.label :correo_electrónico%></p>
+    <p><%= current_user.email %></p>
+  </div>
+  <br>
+  <div class="field">
+    <%= form.submit "Guardar"%>
+  </div>
+<% end %>
+</div>

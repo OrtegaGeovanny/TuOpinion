@@ -1,0 +1,33 @@
+<div class="small-container center-block">
+<br>
+<h1>Editar Artículo</h1>
+<%= form_with(model:@article, local:true) do |form| %>
+<div style="padding-top:40px;">
+  <div class="field">
+  <p><strong><%=form.label :título %></strong></p>
+  <%= form.text_field :title %><p>
+  </div>
+  <div class="field">
+    <p><strong><%= form.label :Categorías%></strong></p>
+    <div class="row">
+    <% @categories.each do |category| %>
+      <label class="col-6 col-sm-4">
+      <%= form.check_box :category_elements, {multiple: true}, category.id, nil %>
+      <%= category.title%>
+      </label>
+      <% end %>
+    </div>
+    <%# 1,2 %>
+  </div>
+  <br>
+  <div class="field">
+  <p><strong><%=form.label :contenido %></strong></p>
+  <%= form.rich_text_area :content %>
+  </div>
+  <br/>
+  <div>
+  <%= form.submit "Editar Artículo", class:"btn btn-success"%>
+  </div>
+  </div>
+<%end%>
+</div>

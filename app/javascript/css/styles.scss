@@ -1,0 +1,80 @@
+@import '~bootstrap/scss/bootstrap';
+
+.small-container {
+  width: 100%;
+  max-width: 650px;
+}
+.large-container {
+  width: 100%;
+  max-width: 960px;
+}
+.center-block {
+  margin: 0 auto;
+}
+.iniciar {
+  width: 70%;
+  height: 100%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  align-items: center;
+}
+.color-sessions {
+  background-color: #f9e1b5;
+}
+.padding {
+  padding: 10px 15px;
+}
+.margin-top {
+  margin: top 1.5em;
+}
+.field {
+  @extend .margin-top;
+  label {
+    @extend .text-uppercase;
+    @extend .text-secondary;
+  }
+  &:first-of-type {
+    margin-top: 0;
+  }
+  input {
+    @extend .form-control;
+    @extend .bg-light;
+  }
+  input[type='checkbox'] {
+    display: inline-block;
+    width: auto;
+    vertical-align: middle;
+    margin-right: 0.5em;
+  }
+}
+.table {
+  tr.no-data td {
+    vertical-align: middle;
+    text-align: left;
+  }
+
+  tr.product-error {
+    input[name='product'],
+    input[name='product']:focus {
+      border-color: #cc0000 !important;
+    }
+  }
+
+  tr.quantity-error {
+    input[name='quantity'],
+    input[name='quantity']:focus {
+      border-color: #cc0000 !important;
+    }
+  }
+
+  .table-row-remove {
+    display: block;
+    padding-top: 8px;
+    font-size: 18px;
+    cursor: pointer;
+  }
+
+  input:disabled {
+    background-color: #f6f6f6 !important;
+  }
+}
