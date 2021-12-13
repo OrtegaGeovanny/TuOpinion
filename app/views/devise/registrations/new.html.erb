@@ -1,4 +1,4 @@
-<div class="small-container center-block">
+<div class="session-container center-block">
 <div class="card color-sessions" style="padding:10%; margin-top:15%">
   <h2 class="text-center">Crear Cuenta</h2>
 
@@ -7,9 +7,12 @@
 
     <div class="field">
       <p><%= f.label :email, "Correo Electrónico" %></p>
-      <p><%= f.email_field :email, autofocus: true, autocomplete: "email" %></p>
+      <p><%= f.email_field :email, autofocus: true, autocomplete: "Correo Electrónico" %></p>
     </div>
-
+    <div class = "field"> 
+      <p><%= f.label :name, "Nombre" %></p>
+      <p><%= f.text_field :name, autofocus: true, autocomplete:"Nombre" %> </p>
+      </div>
     <div class="field">
       <p><%= f.label :password, "Contraseña" %>
       <% if @minimum_password_length %>

@@ -1,31 +1,41 @@
-<div class="large-container center-block">
+<div class="color-fondo">
+<div class="">
+<div  style="padding:10%">
 <p id="notice"><%= notice %></p>
 
 <h1>Categorías</h1>
-<br>
-<table class="table">
-  <thead>
-    <tr>
-      <th>Título</th>
-      <th>Color</th>
-      <th colspan="3">Acciones</th>
-    </tr>
-  </thead>
+  <br>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Título</th>
+          <th>Color</th>
+          <th colspan="3">Acciones</th>
+        </tr>
+      </thead>
 
-  <tbody>
-    <% @categories.each do |category| %>
-      <tr>
-        <td><%= category.title %></td>
-        <td><%= category.color %></td>
-        <td><%= link_to 'Mostrar', category , class:"btn btn-warning"%></td>
-        <td><%= link_to 'Editar', edit_category_path(category), class:"btn btn-info" %></td>
-        <td><%= link_to 'Eliminar', category, method: :delete, data: { confirm: 'Are you sure?' } , class:"btn btn-danger"%></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+      <tbody>
+        <% @categories.each do |category| %>
+          <tr>
+            <td><%= category.title %></td>
+            <td><%= category.color %></td>
+            <td><%= link_to 'Mostrar', category , class:"btn btn-warning"%></td>
+            <td><%= link_to 'Editar', edit_category_path(category), class:"btn btn-info" %></td>
+            <td><%= link_to 'Eliminar', category, method: :delete, data: { confirm: 'Are you sure?' } , class:"btn btn-danger"%></td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
 
-<br>
+  <br>
 
 <%= link_to 'Nueva Categoría', new_category_path , class:"btn btn-success"%>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+</div>
+</div>
 </div>

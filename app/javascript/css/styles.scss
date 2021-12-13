@@ -1,8 +1,14 @@
 @import '~bootstrap/scss/bootstrap';
 
+.color-fondo {
+  background: linear-gradient(45deg, #ffb833, white, #ffb833);
+}
 .small-container {
   width: 100%;
   max-width: 650px;
+}
+.session-container {
+  max-width: 350px;
 }
 .large-container {
   width: 100%;
