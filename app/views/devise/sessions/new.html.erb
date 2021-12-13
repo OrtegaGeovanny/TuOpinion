@@ -1,7 +1,7 @@
- <div class="session-container center-block" >
- <div class="card color-sessions" style="padding:10%; margin-top:15%">
+<div class="color-fondo">
+  <div class="small-container center-block" style="padding:10%">
         <h2 class="text-center">Iniciar Sesión</h2>
-
+        <br>
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
           <div class="field">
               <p><%= f.label :email, "Correo Electrónico" %></p>
@@ -19,12 +19,16 @@
             </div>
           <% end %>
           <br/>
-          <div class="actions" style="align-self:middle">
+          <br>
+          <div class="text-center">
             <%= f.submit "Ingresar", class:"btn btn-primary"%>
           </div>
         <% end %>
-          <br/>
-        <%= render "devise/shared/links" %>
+        <br>
+          <div class="text-center">
+              <%= render "devise/shared/links" %>
+          </div>
+          <br>
     </div>
 
 </div>
